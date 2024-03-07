@@ -5,8 +5,8 @@
     <classes>
       <class name="Tests.AutomationDemo">
         <methods>
+          <include name="getNumberOfRecordsFound"/>
           <include name="setup"/>
-          <include name="loginSuccessfully"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- Tests.AutomationDemo -->

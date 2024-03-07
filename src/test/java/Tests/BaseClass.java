@@ -9,6 +9,8 @@ import org.openqa.selenium.firefox.GeckoDriverService;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeMethod;
+
+import pages.dashboardPage;
 import pages.loginPage;
 
 public class BaseClass {
@@ -23,8 +25,9 @@ public class BaseClass {
         browserobject = new FirefoxDriver(new GeckoDriverService.Builder().build()); 
         wait =new WebDriverWait(browserobject,10);
 		browserobject.manage().window().maximize();
-		
+
 		 new loginPage(browserobject,wait).navigateTositeurl().loginSuccessfully();
+		 new dashboardPage(browserobject,wait).clickOnAdminAccordion();
 	
 		  
 	  }
